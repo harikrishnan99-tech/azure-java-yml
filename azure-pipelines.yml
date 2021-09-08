@@ -10,9 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: PublishPipelineArtifact@1
 - script: 
-    echo FIRST BUILD
     mvn clean install
   displayName: 'Build With Maven'
 - task: Maven@3
